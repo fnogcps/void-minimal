@@ -80,7 +80,7 @@ DEFAULT rootfs
 LABEL rootfs
     LINUX /boot/vmlinuz-${KVER}
     INITRD /boot/initramfs-${KVER}.img
-    APPEND root=${_ROOT} rw i915.enable+rc6=0 intel_iommu=on,igfx_off
+    APPEND root=${_ROOT} rw
 EOF
 
 chroot /mnt/voidlinux xbps-install -Sy syslinux mkinitcpio mkinitcpio-udev
