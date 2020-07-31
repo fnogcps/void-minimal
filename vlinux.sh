@@ -17,9 +17,10 @@ mkdir -p /mnt/voidlinux/boot/
 mkdir -p /mnt/voidlinux/proc /mnt/voidlinux/sys /mnt/voidlinux/dev
 
 mount -t ext2 "${_BOOT}" /mnt/voidlinux/boot
-mount -t proc /proc /mnt/voidlinux/proc
-mount -t sysfs /sys /mnt/voidlinux/sys
+mount -t proc proc /mnt/voidlinux/proc
+mount -t sysfs sys /mnt/voidlinux/sys
 mount -o bind /dev /mnt/voidlinux/dev
+mount -t devpts pts /mnt/voidlinux/dev/pts
 
 mkdir -p /mnt/voidlinux/boot/extlinux
 
